@@ -1,16 +1,30 @@
 <server description="new server">
 
   <featureManager>
-    <feature>webProfile-9.1</feature>
-    <feature>transportSecurity-1.0</feature>
+    <feature>faces-3.0</feature>
+    <feature>managedBeans-2.0</feature>
+    <feature>beanValidation-3.0</feature>
+    <feature>cdi-3.0</feature>
+    <feature>concurrent-2.0</feature>
+    <feature>expressionLanguage-4.0</feature>
+    <feature>jndi-1.0</feature>
+    <feature>pages-3.0</feature>
+    <feature>servlet-5.0</feature>
+    <!-- <feature>webProfile-9.1</feature> -->
+    <!-- <feature>transportSecurity-1.0</feature> -->
+    <!-- <feature>distributedMap-1.0</feature> -->
+    <!-- <feature>jsonb-2.0</feature> -->
+    <!-- <feature>jsonp-2.0</feature> -->
+    <!-- <feature>restfulWS-3.0</feature> -->
+    <!-- <feature>xmlBinding-3.0</feature> -->
     <!-- <feature>microProfile-5.0</feature> -->
   </featureManager>
 
-  <httpEndpoint httpPort="-1" httpsPort="9443" id="defaultHttpEndpoint" host="*"/>
-  <keyStore id="defaultKeyStore" password="yourPassword" />
-  <ssl id="myDefaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="defaultKeyStore" sslProtocol="TLSv1.3,TLSv1.2" />
+  <httpEndpoint httpPort="9080" httpsPort="-1" id="defaultHttpEndpoint" host="*"/>
+  <!-- <keyStore id="defaultKeyStore" password="yourPassword" /> -->
+  <!-- <ssl id="myDefaultSSLConfig" keyStoreRef="defaultKeyStore" trustStoreRef="defaultKeyStore" sslProtocol="TLSv1.3,TLSv1.2" />-->
 
   <!-- <mpMetrics authentication="false"/> -->
-  <logging traceSpecification="com.ibm.ws.microprofile.health.*=all" />
+  <!-- <logging traceSpecification="com.ibm.ws.microprofile.health.*=all" /> -->
 
 </server>

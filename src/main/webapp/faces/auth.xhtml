@@ -10,6 +10,9 @@
     <h:commandButton value="Submit" action="#{googleAuthExample.authenticate()}">
       <f:ajax execute="@form" render="@form" />
     </h:commandButton>
+    <br />
+    #{googleAuthExample.otpAuthURL}<br />
+    #{googleAuthExample.secret}
   </h:form>
 </h:body>
 

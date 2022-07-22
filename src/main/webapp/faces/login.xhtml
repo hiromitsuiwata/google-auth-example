@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<h:head>
+  <title>Login</title>
+</h:head>
+<h:body>
+  <h:form id="registerForm">
+    <h:commandButton value="register" action="#{loginBean.showImage()}">
+      <f:ajax execute="@form" render="@form" />
+    </h:commandButton><br />
+    secret: #{loginBean.secret}<br />
+    otpAuthURL: #{loginBean.otpAuthURL}<br />
+    <c:if test="${loginBean.encodedImage != null}">
+      <img src="data:image/png;base64, #{loginBean.encodedImage}" alt="encodedImage" />
+    </c:if>
+  </h:form>
+
+  <h:form id="oneTimePasswordForm">
+    <h:commandButton id="updateButton" value="update" action="#{loginBean.updateVerificationCode()}">
+      <f:ajax execute="@form" render="@form" /><br />
+    </h:commandButton>
+    now: #{loginBean.now}<br />
+    verificationCode: #{loginBean.verificationCode}<br />
+  </h:form>
+
+
+  <h:form id="authForm">
+    Username:
+    <h:inputText id="name" value="#{loginBean.username}" /><br />
+    Password:
+    <h:inputSecret id="password" value="#{loginBean.password}" /><br />
+    One-time Password:
+    <h:inputText id="oneTimePassword" value="#{loginBean.oneTimePassword}" /><br />
+    <h:commandButton value="auth" action="#{loginBean.authenticate()}" />
+  </h:form>
+</h:body>
+
+</html>

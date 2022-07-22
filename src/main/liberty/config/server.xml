@@ -2,7 +2,7 @@
 
   <featureManager>
     <feature>faces-3.0</feature>
-    <feature>managedBeans-2.0</feature>
+    <!-- <feature>managedBeans-2.0</feature> -->
     <feature>beanValidation-3.0</feature>
     <feature>cdi-3.0</feature>
     <feature>concurrent-2.0</feature>

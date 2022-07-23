@@ -59,7 +59,11 @@ public class LoginBean {
     String accountName = "MyAccount";
     this.otpAuthURL = GoogleAuthenticatorQRGenerator.getOtpAuthTotpURL(issuer, accountName, key);
 
-    createQRCodeBase64String(this.otpAuthURL);
+    // String url =
+    // "otpauth://totp/MyIssuer:MyAccount?secret=YYOLBNJT7GKLOKLLTT47DBPCBO7HMZ3R&issuer=MyIssuer&algorithm=SHA1&digits=6&period=30";
+    String url = "otpauth://totp/MyIssuer:MyAccount?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&issuer=MyIssuer&algorithm=SHA1&digits=6&period=30";
+    this.secret = "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ";
+    createQRCodeBase64String(url);
 
     // デバイス紛失時に利用することを想定したコードを生成
     final List<Integer> scratchCodes = key.getScratchCodes();

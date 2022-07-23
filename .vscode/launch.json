@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TOTP",
+      "request": "launch",
+      "mainClass": "com.example.TOTP",
+      "projectName": "google-auth-example"
+    },
+    {
+      "type": "java",
       "name": "Debug Liberty",
       "request": "attach",
       "hostName": "localhost",

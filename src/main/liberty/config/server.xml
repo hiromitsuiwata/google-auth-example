@@ -6,7 +6,7 @@
     <feature>facesContainer-3.0</feature>
     <feature>beanValidation-3.0</feature>
     <feature>cdi-3.0</feature>
-    <!-- <feature>concurrent-2.0</feature> -->
+    <feature>concurrent-2.0</feature>
     <feature>expressionLanguage-4.0</feature>
     <feature>jndi-1.0</feature>
     <feature>pages-3.0</feature>
